@@ -1,0 +1,11 @@
+{
+  "name": "the-expected-value",
+  "displayName": "The Expected Value",
+  "version": "0.3.0",
+  "description": "Explore Daily EV, collectible prices, history and Magic sell-through, and manage your own Manafolio holdings with explicit account permissions.",
+  "author": {
+    "name": "The Expected Value LLC",
+    "url": "https://theexpectedvalue.com"
+  },
+  "license": "SEE LICENSE IN LICENSE"
+}
