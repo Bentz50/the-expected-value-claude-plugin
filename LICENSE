@@ -4,8 +4,8 @@ Copyright (c) 2026 The Expected Value LLC. All rights reserved.
 Permission is granted to download, install and use this plugin with Claude,
 and to copy and redistribute the unmodified plugin package with this notice,
 including through Anthropic's plugin directory. This permission applies only
-to the plugin manifest, connector configuration, README and workflow skill in
-this package. It does not grant a license to TEV's backend, website, trademarks,
+to the plugin manifest, bundled calculator icon, connector configuration, README
+and workflow skill in this package. It does not grant a license to TEV's backend, website, trademarks,
 pricing datasets, third-party content or other repository files.
 
 Service access requires the applicable TEV account permissions and membership
