@@ -2,8 +2,9 @@
 
 Look up Daily EV, collectible card and sealed-product prices, observed history,
 and Magic sell-through, and manage your own Manafolio with explicit permissions.
-An eligible active paid or gifted TEV MCP membership and a linked TEV account
-are required. Coverage depends on the game, printing, product and source.
+Daily EV is free without account linking. Premium pricing and private Manafolio
+require an eligible active paid or gifted TEV MCP membership and a linked TEV
+account. Coverage depends on the game, printing, product and source.
 
 ## Connect with a personal key
 
@@ -23,12 +24,13 @@ Upload the ZIP in Claude's **Customize →
 Plugins → Add → Upload plugin**, open this plugin's **Connectors** tab, and
 connect The Expected Value. Organization accounts may need an owner to add
 the connector first. Use automatic OAuth setup; no client ID or client secret
-is required. Sign in on TEV and review pricing and private Manafolio
+is required. Public discovery and Daily EV work before sign-in. A protected
+pricing or Manafolio call prompts sign-in on TEV to review the needed
 permissions. Direct changes require the separate unchecked write-consent box.
 Your personal MCP key is not needed. Never paste a key or token into a chat.
 
 You can also add `https://mcp.theexpectedvalue.com/mcp/claude` directly as a
-custom connector using OAuth, without the plugin's workflow skill.
+custom connector using OAuth, without the plugin's workflow skills.
 If upgrading from 0.1.1, update the plugin and disconnect/reconnect the connector
 to approve the added permissions. Existing pricing-only grants do not gain them.
 
@@ -40,8 +42,14 @@ finish and marketplace when those matter. Results identify their source,
 currency and observation date. Prices are observations, not inventory or a
 guarantee of a future sale.
 
-The OAuth connector offers the same 16 tools as ChatGPT: Daily EV, nine pricing
-tools and six Manafolio tools. It requests `pricing:read manafolio:read manafolio:write`.
+Version 0.4.0 includes three skills: `daily-ev` for public box/display EV and
+coverage, `tev-pricing` for prices/history/liquidity, and `manafolio` for private
+holdings, changes and undo. Ask for Daily EV without signing in; results preserve
+pagination, source dates, missing values and the published model's exclusions.
+
+The connector offers the same 16 tools as ChatGPT: Daily EV, nine pricing
+tools and six Manafolio tools. Only protected calls request OAuth: `pricing:read`
+for pricing, plus `manafolio:read` for private reads and `manafolio:write` for changes.
 Private reads cover your holdings, costs, dated valuations and change history.
 With write consent, ask it to add/edit holdings, soft-delete lots, record completed
 sales/openings, or undo a specific MCP change. Writes use version checks and
@@ -64,5 +72,6 @@ to Claude.
 The package is proprietary. Its included [LICENSE](LICENSE) permits use and
 redistribution of this unmodified plugin, including through Anthropic's directory.
 It grants no backend, dataset or third-party content rights. Service access remains
-subject to TEV's terms and your membership. Directory acceptance is separate from
-installing the plugin; this beta has not been approved for the directory.
+subject to TEV's terms and the access requirements above. Directory acceptance
+is separate from installing the plugin. Version 0.3.0 was published in the
+directory; newer updates require their own review.
