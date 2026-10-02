@@ -6,33 +6,43 @@ Daily EV is free without account linking. Premium pricing and private Manafolio
 require an eligible active paid or gifted TEV MCP membership and a linked TEV
 account. Coverage depends on the game, printing, product and source.
 
-## Connect with a personal key
+## Connect Claude: recommended setup
 
-If Claude web/Desktop exposes **Request headers**, add a custom connector with
-URL `https://mcp.theexpectedvalue.com/mcp` and **No sign-in**. Set header name
-`Authorization` and value `Bearer YOUR_KEY`, replacing `YOUR_KEY` with your
-personal TEV key and using one space after `Bearer` (no plus sign or quotes).
-Save and enable the connector; nine read-only tools should appear. A member
-confirmed this setup and a sealed-price query on September 29, 2026.
-Use the header settings, never a chat, to enter your key. Nonstandard headers
-require Anthropic approval; use Authorization for Claude. See
-[setup and troubleshooting](https://theexpectedvalue.com/mcp#claude).
+1. Install **The Expected Value** from Claude's plugin directory. For manual
+   installation, download the ZIP from this repository's Releases and upload it
+   under **Customize → Plugins → Add → Upload plugin**.
+2. Open this plugin's **Connectors** tab and choose **Connect**.
+3. Use Daily EV without signing in. When you request premium pricing or private
+   Manafolio data, follow Claude's sign-in prompt, sign in to TEV and review the
+   requested permissions. Changes require separate write consent.
 
-## Connect the OAuth plugin
-
-Upload the ZIP in Claude's **Customize →
-Plugins → Add → Upload plugin**, open this plugin's **Connectors** tab, and
-connect The Expected Value. Organization accounts may need an owner to add
-the connector first. Use automatic OAuth setup; no client ID or client secret
-is required. Public discovery and Daily EV work before sign-in. A protected
-pricing or Manafolio call prompts sign-in on TEV to review the needed
-permissions. Direct changes require the separate unchecked write-consent box.
-Your personal MCP key is not needed. Never paste a key or token into a chat.
+Use automatic OAuth setup. No personal key, request header, client ID or client
+secret is needed. Organization accounts may need an owner to add the connector
+first. Never paste a key or token into a chat.
 
 You can also add `https://mcp.theexpectedvalue.com/mcp/claude` directly as a
 custom connector using OAuth, without the plugin's workflow skills.
 If upgrading from 0.1.1, update the plugin and disconnect/reconnect the connector
 to approve the added permissions. Existing pricing-only grants do not gain them.
+
+## Personal-key fallback
+
+Use this pricing-only method only when you need a custom connector with
+**Request headers**. Add URL `https://mcp.theexpectedvalue.com/mcp` and select
+**No sign-in**. Set the header name to `Authorization`. When a new key is shown
+on [Manage MCP server access](https://theexpectedvalue.com/sealed-portfolio/public/mcp-access.php),
+use **Copy complete Authorization value** and paste it into the value field,
+even if masked. For a key you already saved, enter `Bearer YOUR_KEY` with one
+space after `Bearer` (no plus sign or quotes).
+
+Save and enable the connector; nine read-only pricing tools should appear.
+This fallback does not access private Manafolio. If your existing key connection
+works, you can keep it while Claude is busy and switch to OAuth when convenient.
+Do not generate a replacement solely to use the copy button: replacement
+immediately invalidates your previous key. The key is shown only when issued.
+Use header settings, never a chat, to enter it. Request-header availability
+varies by Claude account; nonstandard headers require Anthropic approval.
+See [setup and troubleshooting](https://theexpectedvalue.com/mcp#claude).
 
 ## Use it
 
@@ -42,7 +52,7 @@ finish and marketplace when those matter. Results identify their source,
 currency and observation date. Prices are observations, not inventory or a
 guarantee of a future sale.
 
-Version 0.4.0 includes three skills: `daily-ev` for public box/display EV and
+Version 0.4.0 introduced three skills: `daily-ev` for public box/display EV and
 coverage, `tev-pricing` for prices/history/liquidity, and `manafolio` for private
 holdings, changes and undo. Ask for Daily EV without signing in; results preserve
 pagination, source dates, missing values and the published model's exclusions.
@@ -73,5 +83,6 @@ The package is proprietary. Its included [LICENSE](LICENSE) permits use and
 redistribution of this unmodified plugin, including through Anthropic's directory.
 It grants no backend, dataset or third-party content rights. Service access remains
 subject to TEV's terms and the access requirements above. Directory acceptance
-is separate from installing the plugin. Version 0.3.0 was published in the
-directory; newer updates require their own review.
+is separate from manual installation. Version 0.4.0 is published in the directory;
+version 0.4.1 simplifies setup instructions and keeps the same skills and tools.
+Directory updates require their own publication review.
