@@ -85,4 +85,5 @@ It grants no backend, dataset or third-party content rights. Service access rema
 subject to TEV's terms and the access requirements above. Directory acceptance
 is separate from manual installation. Version 0.4.0 is published in the directory;
 version 0.4.1 simplifies setup instructions and keeps the same skills and tools.
+Version 0.4.2 includes the privacy policy URL in the plugin manifest.
 Directory updates require their own publication review.

@@ -1,7 +1,8 @@
 {
   "name": "the-expected-value",
   "displayName": "The Expected Value",
-  "version": "0.4.1",
+  "version": "0.4.2",
+  "privacyPolicyUrl": "https://theexpectedvalue.com/legal/privacy-policy",
   "icon": ".claude-plugin/icon.png",
   "description": "Browse free Daily EV without signing in, research collectible pricing and history, and manage your own Manafolio with explicit account permissions. Includes three focused workflow skills.",
   "author": {
