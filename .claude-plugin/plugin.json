@@ -1,10 +1,10 @@
 {
   "name": "the-expected-value",
   "displayName": "The Expected Value",
-  "version": "0.4.2",
+  "version": "0.5.0",
   "privacyPolicyUrl": "https://theexpectedvalue.com/legal/privacy-policy",
   "icon": ".claude-plugin/icon.png",
-  "description": "Browse free Daily EV without signing in, research collectible pricing and history, and manage your own Manafolio with explicit account permissions. Includes three focused workflow skills.",
+  "description": "Browse free Daily EV without signing in, research collectible pricing and history, and manage your own Manafolio with explicit account permissions. Includes four workflow skills, with sports card prices and history requiring sign-in and MCP Data Access entitlement.",
   "author": {
     "name": "The Expected Value LLC",
     "url": "https://theexpectedvalue.com"
