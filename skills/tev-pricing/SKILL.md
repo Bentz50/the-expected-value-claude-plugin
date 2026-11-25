@@ -37,5 +37,10 @@ Use the `the-expected-value` MCP connector for TEV pricing requests.
    connector to send messages. If authentication or membership fails, explain
    the connection issue instead of guessing data or substituting another key.
 
+Use `query_rip_risk` for a validated opening distribution and recovery at a
+supplied cost. Use `query_ev_pe_history` for exact-product same-day sealed P/E,
+`query_daily_ev_movers` for modeled EV changes, and `query_singles_movers` for
+dated Low-price comparisons. Preserve dates, coverage, pricing basis and Sift.
+
 For public box/display EV and price-to-EV questions, use the `daily-ev` skill
 and `query_daily_ev` first. For private holdings or changes, use `manafolio`.
